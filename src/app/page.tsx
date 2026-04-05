@@ -133,7 +133,11 @@ function SplitHeading({
           initial={{ opacity: 0, y: 40, rotateX: -40 }}
           animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : {}}
           transition={{ duration: 0.6, delay: delay + i * 0.018, ease: [0.16, 1, 0.3, 1] }}
-          style={{ display: "inline-block", whiteSpace: char === " " ? "pre" : "normal" }}>
+          style={{
+  display: "inline-block",
+  whiteSpace: "pre",
+  wordBreak: "keep-all",
+}}>
           {char}
         </motion.span>
       ))}
@@ -900,9 +904,14 @@ function CTASection() {
         className="max-w-[1180px] mx-auto px-6 text-center relative z-10">
         <motion.div variants={fadeUp} className="flex justify-center"><SectionLabel>Next Step</SectionLabel></motion.div>
         <SplitHeading isInView={isInView} delay={0.04}
-          className="text-[clamp(3rem,8vw,6.5rem)] font-black leading-[0.92] tracking-[-0.035em] text-white mb-4 mx-auto block"
+          className="text-[clamp(3rem,8vw,6.5rem)] break-words font-black leading-[0.92] tracking-[-0.035em] text-white mb-4 mx-auto block"
           style={{ fontFamily: "'DM Serif Display', Georgia, serif", maxWidth: "880px" }}>
-          {"Let's build something"}
+          {"Let's build"}
+        </SplitHeading>
+        <SplitHeading isInView={isInView} delay={0.05}
+          className="text-[clamp(3rem,8vw,6.5rem)] break-words font-black leading-[0.92] tracking-[-0.035em] text-white mb-4 mx-auto block"
+          style={{ fontFamily: "'DM Serif Display', Georgia, serif", maxWidth: "880px" }}>
+          {"something"}
         </SplitHeading>
         <motion.div initial={{ opacity: 0, scale: 0.85 }} animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ type: "spring", stiffness: 150, damping: 18, delay: 0.55 }} className="mb-14">

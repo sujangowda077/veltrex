@@ -761,7 +761,12 @@ function CTASection() {
         <SplitHeading isInView={isInView} delay={0.05}
           className="font-black leading-[0.92] tracking-[-0.035em] text-white mb-8 mx-auto block"
           style={{ fontFamily: "'DM Serif Display', Georgia, serif", fontSize: "clamp(3rem, 8vw, 6.5rem)", maxWidth: "880px" }}>
-          {"Let's build something"}
+          {"Let's build "}
+        </SplitHeading>
+        <SplitHeading isInView={isInView} delay={0.05}
+          className="font-black leading-[0.92] tracking-[-0.035em] text-white mb-8 mx-auto block"
+          style={{ fontFamily: "'DM Serif Display', Georgia, serif", fontSize: "clamp(3rem, 8vw, 6.5rem)", maxWidth: "880px" }}>
+          {"something "}
         </SplitHeading>
         <motion.div initial={{ opacity: 0, scale: 0.85 }} animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ type: "spring", stiffness: 150, damping: 18, delay: 0.55 }} className="mb-14">

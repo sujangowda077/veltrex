@@ -1089,7 +1089,12 @@ function CTASection() {
           className="font-black leading-[0.92] tracking-[-0.035em] text-white mb-2 mx-auto block"
           style={{ fontFamily: "'DM Serif Display', Georgia, serif", fontSize: "clamp(3rem, 8vw, 6.5rem)", maxWidth: "880px" }}
         >
-          {"Let's build something"}
+          {"Let's build "}
+        </SplitHeading>
+        <SplitHeading isInView={isInView} delay={0.05}
+          className="text-[clamp(3rem,8vw,6.5rem)] break-words font-black leading-[0.92] tracking-[-0.035em] text-white mb-4 mx-auto block"
+          style={{ fontFamily: "'DM Serif Display', Georgia, serif", maxWidth: "880px" }}>
+          {"something"}
         </SplitHeading>
 
         {/* "extraordinary." — gold gradient, matches services page */}
